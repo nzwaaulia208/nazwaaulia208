@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <from onsubmit="return false">
+    <input type="number" id="x">
+    <label for="x">Masukan nilai x</label>
+    <input type="number" id="y">
+    <label for="y">Masukan nilai y</label>
+    <button onclick="cek_nilai()">cek nilai</button>
+  </from>
+  <div id="hasil"></div> 
+  <script>
+    function cek_nilai(){
+      let x =parseInt(document.getElementById('x')).value;
+      let y =parseInt(document.getElementById('y')).value;
+      let p = x + y
+      document.getElementById('hasil').innerHTML = p
+      if (p>=0) {
+        var q =x*y
+      } else {
+        var q =x / y
+      }
+      document.getElementById('hasil').innerHTML = q
+    }
+  </script>
+</body>
+</html>

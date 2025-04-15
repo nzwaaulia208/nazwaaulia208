@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <from onsumbit="return false">
+        <label for="">Masukan sisi</label>
+        <input type="number" id="sisi">
+        <button onclick="hitungluas9()">Hitung luas</button>
+    </from>
+    <div id="hasil"></div>
+    <script>
+        function hitungluas() {
+            let sisi = document.getElementById("sisi").value
+            let hasil = sisi * sisi  
+            document.getElementById("hasil").innerHTML = "Luas persegi adalah" +hasil
+        }
+    </script>
+</body>
+</html>
