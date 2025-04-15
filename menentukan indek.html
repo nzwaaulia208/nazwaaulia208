@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <from onsubmit="return false">
+    <label for ="nama">Masukan nama</label>
+    <input type ="text" id="nama"required><br>
+    <label for ="nilai">Masukan nilai</label>
+    <input type ="number" id="nilai">
+    <button onclick="cek_nilai()">cek nilai</button>
+  </from>  
+  <div id="nama"></div>
+  <div id="hasil"></div>
+  <script>
+    function cek_nilai() {
+        let nama =document.getElementById('nama').value
+        document.getElementById('nama').innerHTML = nama
+        hasil.innerHTML = nama
+        let nilai = document.getElementById('nilai').value
+        if (nilai >=90) {
+            document.getElementById('hasil').innerHTML= "selamat" + nama+ "Mendapatkan indek A"
+        } else if (nilai >=80) {
+            document.getElementById('hasil').innerHTML= "selamat" + nama+ "Mendapatkan indek B"
+        } else if (nilai >=70) {
+            document.getElementById('hasil').innerHTML= "selamat" +nama+ "Mendapatkan indek C"
+        } else if (nilai >=60) {
+            document.getElementById('hasil').innerHTML= "selamat" +nama+ "Mendapatkan indek D"
+        } else {
+            document.getElementById('hasil').innerHTML= "Selain diatas maka indeknya E"
+        }
+        
+    }
+  </script>
+</body>
+</html>
